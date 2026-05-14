@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>贪吃蛇游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header id="game-header">
+            <h1>🐍 贪吃蛇</h1>
+            <div id="score-board">
+                <span>得分: <strong id="score">0</strong></span>
+                <span>最高分: <strong id="high-score">0</strong></span>
+            </div>
+        </header>
+        <canvas id="game-canvas" aria-label="贪吃蛇游戏区域，使用方向键或WASD控制"></canvas>
+        <div id="controls">
+            <div id="mobile-controls">
+                <button class="ctrl-btn" id="btn-up" aria-label="向上">▲</button>
+                <div class="ctrl-row">
+                    <button class="ctrl-btn" id="btn-left" aria-label="向左">◀</button>
+                    <button class="ctrl-btn" id="btn-right" aria-label="向右">▶</button>
+                </div>
+                <button class="ctrl-btn" id="btn-down" aria-label="向下">▼</button>
+            </div>
+            <button id="start-btn">开始游戏</button>
+        </div>
+        <div id="game-over-overlay" class="hidden">
+            <h2>游戏结束</h2>
+            <p>最终得分: <strong id="final-score">0</strong></p>
+            <button id="restart-btn">重新开始</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
